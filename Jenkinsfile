@@ -15,4 +15,22 @@ pipeline {
             }
         }
     }
+	
+	  stage('Deliver for development') {
+            when {
+                branch 'development'
+            }
+            steps {
+                echo 'Development Deployment done'
+            }
+        }
+		
+		 stage('Deploy for production') {
+            when {
+                branch 'production'
+            }
+            steps {
+                echo 'Production Deployment done'
+            }
+        }
 }
