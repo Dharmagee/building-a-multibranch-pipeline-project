@@ -11,9 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                @echo off
-
-				sh "%CD%\jenkins\scripts\test.sh"
+                sudo './jenkins/scripts/test.sh'
             }
         }
     }
