@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat run 'npm install'
+                sudo run 'npm install'
             }
         }
         stage('Test') {
