@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sudo run 'npm install'
+                 npm install
             }
         }
         stage('Test') {
