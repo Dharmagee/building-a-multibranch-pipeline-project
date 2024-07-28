@@ -6,12 +6,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                bat run 'npm install'
             }
         }
         stage('Test') {
             steps {
-                sh './jenkins/scripts/test.sh'
+                @echo off
+
+				sh "%CD%\jenkins\scripts\test.sh"
             }
         }
     }
